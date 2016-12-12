@@ -13,8 +13,32 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    ability.cpp \
+    album.cpp \
+    attack.cpp \
+    card.cpp \
+    energycard.cpp \
+    library.cpp \
+    pokemoncard.cpp \
+    programmanager.cpp \
+    resistance.cpp \
+    trainercard.cpp \
+    type.cpp \
+    weakness.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    ability.h \
+    album.h \
+    attack.h \
+    card.h \
+    energycard.h \
+    library.h \
+    pokemoncard.h \
+    programmanager.h \
+    resistance.h \
+    trainercard.h \
+    type.h \
+    weakness.h
 
 FORMS    += mainwindow.ui
