@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CardView</class>
+ <widget class="QDialog" name="CardView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>531</width>
+    <height>612</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>513</width>
+     <height>594</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="2,5">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="labelCardImage">
+        <property name="minimumSize">
+         <size>
+          <width>245</width>
+          <height>342</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>245</width>
+          <height>342</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTreeWidget" name="treeWidgetUser">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>Status</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Condition</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Album</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="treeWidgetMain">
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>ID</string>
+           </property>
+           <property name="text">
+            <string>001</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Name</string>
+           </property>
+           <property name="text">
+            <string>Pikatchu</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Subtype</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Supertype</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Number</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Artist</string>
+           </property>
+           <property name="text">
+            <string>Yoko</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Rarity</string>
+           </property>
+           <property name="text">
+            <string>Rare Holo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Series</string>
+           </property>
+           <property name="text">
+            <string>Generations</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Set</string>
+           </property>
+           <property name="text">
+            <string>xy-7</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Set code</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="treeWidgetFull">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>240</height>
+       </size>
+      </property>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Description</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

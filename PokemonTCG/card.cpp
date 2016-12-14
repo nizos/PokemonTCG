@@ -3,23 +3,23 @@
 // Default constructor
 Card::Card()
 {
-    this->id = "ID";
-    this->name = "Name";
-    this->imageURL = "ImageURL";
-    this->subtype = "Subtype";
-    this->supertype = "Supertype";
+    this->id = "Default ID";
+    this->name = "Default Name";
+    this->imageURL = "Default ImageURL";
+    this->subtype = "Default Subtype";
+    this->supertype = "Default Supertype";
     this->number = 0;
-    this->artist = "Artist";
-    this->rarity = "Rarity";
-    this->series = "Series";
-    this->set = "Set";
-    this->setCode = "SetCode";
-    this->condition = "Condition";
-    this->status = "Status";
+    this->artist = "Default Artist";
+    this->rarity = "Default Rarity";
+    this->series = "Default Series";
+    this->set = "Default Set";
+    this->setCode = "Default SetCode";
+    this->condition = "Default Condition";
+    this->status = "Default Status";
 }
 
 // Overloaded constructor
-Card::Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition,QString status)
+Card::Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status)
 {
     this->id = id;
     this->name = name;
@@ -35,6 +35,8 @@ Card::Card(QString id, QString name, QString imageURL, QString subtype, QString 
     this->series = series;
     this->set = set;
     this->setCode = setCode;
+    this->condition = condition;
+    this->status = status;
 }
 
 
@@ -94,6 +96,15 @@ void Card::setSetCode(QString setCode)
     this->setCode = setCode;
 }
 
+void Card::setCondition(QString condition)
+{
+    this->condition = condition;
+}
+
+void Card::setStatus(QString status)
+{
+    this->status = status;
+}
 
 // Getters
 QString Card::getID()
@@ -151,6 +162,15 @@ QString Card::getSetCode()
     return this->setCode;
 }
 
+QString Card::getCondition()
+{
+    return this->condition;
+}
+
+QString Card::getStatus()
+{
+    return this->status;
+}
 
 // toString
 QString Card::toString()

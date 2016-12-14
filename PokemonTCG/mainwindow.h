@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPixmap>
+#include <QFile>
+#include "cardview.h"
 
 namespace Ui {
 class MainWindow;
@@ -15,8 +18,13 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+
+    void on_pushButtonFindPokemon_clicked();
+
 private:
     Ui::MainWindow *ui;
+    CardView *cv;
 };
 
 #endif // MAINWINDOW_H

@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     resistance.cpp \
     trainercard.cpp \
     type.cpp \
-    weakness.cpp
+    weakness.cpp \
+    cardview.cpp
 
 HEADERS  += mainwindow.h \
     ability.h \
@@ -39,6 +40,11 @@ HEADERS  += mainwindow.h \
     resistance.h \
     trainercard.h \
     type.h \
-    weakness.h
+    weakness.h \
+    cardview.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    cardview.ui
+
+RESOURCES += \
+    Resources/localfiles.qrc

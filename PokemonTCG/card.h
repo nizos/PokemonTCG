@@ -58,8 +58,8 @@ public:
     QString getStatus();
 
     // toString
-    QString toString();
-    virtual QString toStringSpec();
+    virtual QString toString();
+    QString toStringSpec();
 
     // Destructors
     ~Card();

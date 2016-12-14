@@ -7,8 +7,8 @@
 #include "weakness.h"
 #include "resistance.h"
 
-class PokemonCard:
-        public Card
+class PokemonCard
+        : public Card
 {
 private:
     int hp;
@@ -67,9 +67,9 @@ public:
     void removeResistance();
 
     // toString
-    QString toString() const;
+    QString toString();
 
-    // Destructors
+    // Destructor
     ~PokemonCard();
 
 
