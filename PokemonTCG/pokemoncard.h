@@ -50,6 +50,13 @@ public:
     int getNrOfWeaknesses();
     int getNrOfResistances();
 
+    Type* getRetreatCost(int pos);
+    Ability* getAbility(int pos);
+    Type* getType(int pos);
+    Attack* getAttack(int pos);
+    Weakness* getWeakness(int pos);
+    Resistance* getResistance(int pos);
+
     // Add
     void addRetreatCost();
     void addAbility();

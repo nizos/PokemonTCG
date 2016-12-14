@@ -17,17 +17,20 @@ class CardView : public QDialog
 
 public:
 
-    explicit CardView(QWidget *parent = 0);
+    explicit CardView(QWidget *parent = 0, PokemonCard* poke = 0);
 
 
     void AddRoot(QString name, QString description);
     void AddChild(QTreeWidgetItem *parent, QString name, QString description);
 
-    void AddAbility(QTreeWidgetItem *parent, QString abilityName, QString abilityText, QString abilityType);
-    void AddAttack(QTreeWidgetItem *parent, QString attackCost, QString attackName, QString attackText, QString attackDamage, QString attackConvertedEnergyCost);
-    void AddResistance(QTreeWidgetItem *parent, QString resistanceType, QString resistanceValue);
-    void AddType(QTreeWidgetItem *parent, QString typeName);
-    void AddWeakness(QTreeWidgetItem *parent, QString weaknessType, QString weaknessValue);
+    void AddMain(QString name, QString description);
+    void AddUser(QString name, QString description);
+
+    void AddAbility(QTreeWidgetItem *parent, Ability* abilityPntr, int i);
+    void AddAttack(QTreeWidgetItem *parent, Attack* attackPntr, int i);
+    void AddResistance(QTreeWidgetItem *parent, Resistance* resistancePntr, int i);
+    void AddType(QTreeWidgetItem *parent, Type* typePntr, int i);
+    void AddWeakness(QTreeWidgetItem *parent, Weakness* weaknessPntr, int i);
 
     ~CardView();
 

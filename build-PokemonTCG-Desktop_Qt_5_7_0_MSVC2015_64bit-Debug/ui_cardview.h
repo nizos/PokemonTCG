@@ -17,6 +17,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -33,6 +34,9 @@ public:
     QVBoxLayout *verticalLayout;
     QTreeWidget *treeWidgetUser;
     QTreeWidget *treeWidgetMain;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label;
+    QLineEdit *lineEdit;
     QTreeWidget *treeWidgetFull;
 
     void setupUi(QDialog *CardView)
@@ -59,25 +63,12 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         treeWidgetUser = new QTreeWidget(widget);
-        new QTreeWidgetItem(treeWidgetUser);
-        new QTreeWidgetItem(treeWidgetUser);
-        new QTreeWidgetItem(treeWidgetUser);
         treeWidgetUser->setObjectName(QStringLiteral("treeWidgetUser"));
         treeWidgetUser->setMaximumSize(QSize(16777215, 100));
 
         verticalLayout->addWidget(treeWidgetUser);
 
         treeWidgetMain = new QTreeWidget(widget);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
-        new QTreeWidgetItem(treeWidgetMain);
         treeWidgetMain->setObjectName(QStringLiteral("treeWidgetMain"));
 
         verticalLayout->addWidget(treeWidgetMain);
@@ -88,14 +79,41 @@ public:
 
         verticalLayout_2->addLayout(horizontalLayout);
 
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label = new QLabel(widget);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout_2->addWidget(label);
+
+        lineEdit = new QLineEdit(widget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        horizontalLayout_2->addWidget(lineEdit);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_2);
+
         treeWidgetFull = new QTreeWidget(widget);
         treeWidgetFull->setObjectName(QStringLiteral("treeWidgetFull"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(treeWidgetFull->sizePolicy().hasHeightForWidth());
+        treeWidgetFull->setSizePolicy(sizePolicy);
         treeWidgetFull->setMaximumSize(QSize(16777215, 240));
+        treeWidgetFull->setSizeAdjustPolicy(QAbstractScrollArea::AdjustIgnored);
+        treeWidgetFull->setAlternatingRowColors(false);
+        treeWidgetFull->setAnimated(false);
+        treeWidgetFull->setWordWrap(true);
+        treeWidgetFull->header()->setDefaultSectionSize(200);
+        treeWidgetFull->header()->setMinimumSectionSize(33);
+        treeWidgetFull->header()->setStretchLastSection(true);
 
         verticalLayout_2->addWidget(treeWidgetFull);
 
         verticalLayout_2->setStretch(0, 2);
-        verticalLayout_2->setStretch(1, 5);
+        verticalLayout_2->setStretch(2, 5);
 
         retranslateUi(CardView);
 
@@ -109,54 +127,13 @@ public:
         QTreeWidgetItem *___qtreewidgetitem = treeWidgetUser->headerItem();
         ___qtreewidgetitem->setText(1, QApplication::translate("CardView", "Description", 0));
         ___qtreewidgetitem->setText(0, QApplication::translate("CardView", "Name", 0));
-
-        const bool __sortingEnabled = treeWidgetUser->isSortingEnabled();
-        treeWidgetUser->setSortingEnabled(false);
-        QTreeWidgetItem *___qtreewidgetitem1 = treeWidgetUser->topLevelItem(0);
-        ___qtreewidgetitem1->setText(0, QApplication::translate("CardView", "Status", 0));
-        QTreeWidgetItem *___qtreewidgetitem2 = treeWidgetUser->topLevelItem(1);
-        ___qtreewidgetitem2->setText(0, QApplication::translate("CardView", "Condition", 0));
-        QTreeWidgetItem *___qtreewidgetitem3 = treeWidgetUser->topLevelItem(2);
-        ___qtreewidgetitem3->setText(0, QApplication::translate("CardView", "Album", 0));
-        treeWidgetUser->setSortingEnabled(__sortingEnabled);
-
-        QTreeWidgetItem *___qtreewidgetitem4 = treeWidgetMain->headerItem();
-        ___qtreewidgetitem4->setText(1, QApplication::translate("CardView", "Description", 0));
-        ___qtreewidgetitem4->setText(0, QApplication::translate("CardView", "Name", 0));
-
-        const bool __sortingEnabled1 = treeWidgetMain->isSortingEnabled();
-        treeWidgetMain->setSortingEnabled(false);
-        QTreeWidgetItem *___qtreewidgetitem5 = treeWidgetMain->topLevelItem(0);
-        ___qtreewidgetitem5->setText(1, QApplication::translate("CardView", "001", 0));
-        ___qtreewidgetitem5->setText(0, QApplication::translate("CardView", "ID", 0));
-        QTreeWidgetItem *___qtreewidgetitem6 = treeWidgetMain->topLevelItem(1);
-        ___qtreewidgetitem6->setText(1, QApplication::translate("CardView", "Pikatchu", 0));
-        ___qtreewidgetitem6->setText(0, QApplication::translate("CardView", "Name", 0));
-        QTreeWidgetItem *___qtreewidgetitem7 = treeWidgetMain->topLevelItem(2);
-        ___qtreewidgetitem7->setText(0, QApplication::translate("CardView", "Subtype", 0));
-        QTreeWidgetItem *___qtreewidgetitem8 = treeWidgetMain->topLevelItem(3);
-        ___qtreewidgetitem8->setText(0, QApplication::translate("CardView", "Supertype", 0));
-        QTreeWidgetItem *___qtreewidgetitem9 = treeWidgetMain->topLevelItem(4);
-        ___qtreewidgetitem9->setText(0, QApplication::translate("CardView", "Number", 0));
-        QTreeWidgetItem *___qtreewidgetitem10 = treeWidgetMain->topLevelItem(5);
-        ___qtreewidgetitem10->setText(1, QApplication::translate("CardView", "Yoko", 0));
-        ___qtreewidgetitem10->setText(0, QApplication::translate("CardView", "Artist", 0));
-        QTreeWidgetItem *___qtreewidgetitem11 = treeWidgetMain->topLevelItem(6);
-        ___qtreewidgetitem11->setText(1, QApplication::translate("CardView", "Rare Holo", 0));
-        ___qtreewidgetitem11->setText(0, QApplication::translate("CardView", "Rarity", 0));
-        QTreeWidgetItem *___qtreewidgetitem12 = treeWidgetMain->topLevelItem(7);
-        ___qtreewidgetitem12->setText(1, QApplication::translate("CardView", "Generations", 0));
-        ___qtreewidgetitem12->setText(0, QApplication::translate("CardView", "Series", 0));
-        QTreeWidgetItem *___qtreewidgetitem13 = treeWidgetMain->topLevelItem(8);
-        ___qtreewidgetitem13->setText(1, QApplication::translate("CardView", "xy-7", 0));
-        ___qtreewidgetitem13->setText(0, QApplication::translate("CardView", "Set", 0));
-        QTreeWidgetItem *___qtreewidgetitem14 = treeWidgetMain->topLevelItem(9);
-        ___qtreewidgetitem14->setText(0, QApplication::translate("CardView", "Set code", 0));
-        treeWidgetMain->setSortingEnabled(__sortingEnabled1);
-
-        QTreeWidgetItem *___qtreewidgetitem15 = treeWidgetFull->headerItem();
-        ___qtreewidgetitem15->setText(1, QApplication::translate("CardView", "Description", 0));
-        ___qtreewidgetitem15->setText(0, QApplication::translate("CardView", "Name", 0));
+        QTreeWidgetItem *___qtreewidgetitem1 = treeWidgetMain->headerItem();
+        ___qtreewidgetitem1->setText(1, QApplication::translate("CardView", "Description", 0));
+        ___qtreewidgetitem1->setText(0, QApplication::translate("CardView", "Name", 0));
+        label->setText(QApplication::translate("CardView", "Search", 0));
+        QTreeWidgetItem *___qtreewidgetitem2 = treeWidgetFull->headerItem();
+        ___qtreewidgetitem2->setText(1, QApplication::translate("CardView", "Description", 0));
+        ___qtreewidgetitem2->setText(0, QApplication::translate("CardView", "Name", 0));
     } // retranslateUi
 
 };

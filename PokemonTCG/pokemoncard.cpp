@@ -8,26 +8,27 @@ PokemonCard::PokemonCard() : Card()
     // Abilities
     this->nrOfAbilities = 1;
     this->abilities = new Ability*[nrOfAbilities];
-
-    // Retreat costs
-    this->nrOfRetreatCosts = 1;
-    this->retreatCosts = new Type*[nrOfRetreatCosts];
+    abilities[0] = new Ability();
 
     // Types
     this->nrOfTypes = 1;
     this->types = new Type*[nrOfTypes];
+    types[0] = new Type();
 
     // Attacks
     this->nrOfAttacks = 1;
     this->attacks = new Attack*[nrOfAttacks];
+    attacks[0] = new Attack();
 
     // Weaknesses
     this->nrOfWeaknesses = 1;
     this->weaknesses = new Weakness*[nrOfWeaknesses];
+    weaknesses[0] = new Weakness();
 
     // Resistances
     this->nrOfResistances = 1;
     this->resistances = new Resistance*[nrOfResistances];
+    resistances[0] = new Resistance();
 }
 
 PokemonCard::PokemonCard(int hp, int nrOfAbilities,int nrOfRetreatCosts, int nrOfTypes, int nrOfAttacks, int nrOfWeaknesses, int nrOfResistances, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status)
@@ -133,6 +134,38 @@ int PokemonCard::getNrOfResistances()
 {
     return this->nrOfResistances;
 }
+
+Type* PokemonCard::getRetreatCost(int pos)
+{
+    return this->retreatCosts[pos];
+}
+
+Ability* PokemonCard::getAbility(int pos)
+{
+    return this->abilities[pos];
+}
+
+Type* PokemonCard::getType(int pos)
+{
+    return this->types[pos];
+}
+
+Attack* PokemonCard::getAttack(int pos)
+{
+    return this->attacks[pos];
+}
+
+Weakness* PokemonCard::getWeakness(int pos)
+{
+    return this->weaknesses[pos];
+}
+
+Resistance* PokemonCard::getResistance(int pos)
+{
+    return this->resistances[pos];
+}
+
+
 
 
 // Add

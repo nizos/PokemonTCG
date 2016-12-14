@@ -5,6 +5,7 @@
 #include <QPixmap>
 #include <QFile>
 #include "cardview.h"
+#include "pokemoncard.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     CardView *cv;
+    PokemonCard* poke;
+
 };
 
 #endif // MAINWINDOW_H

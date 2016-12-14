@@ -118,9 +118,6 @@
       <property name="sizeAdjustPolicy">
        <enum>QAbstractScrollArea::AdjustIgnored</enum>
       </property>
-      <property name="alternatingRowColors">
-       <bool>false</bool>
-      </property>
       <property name="animated">
        <bool>false</bool>
       </property>
@@ -128,7 +125,7 @@
        <bool>true</bool>
       </property>
       <attribute name="headerDefaultSectionSize">
-       <number>200</number>
+       <number>500</number>
       </attribute>
       <attribute name="headerMinimumSectionSize">
        <number>33</number>

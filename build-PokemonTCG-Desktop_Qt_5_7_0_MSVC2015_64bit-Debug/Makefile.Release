@@ -640,6 +640,29 @@ release\moc_mainwindow.cpp: C:\Qt\5.7\msvc2015_64\include\QtWidgets\QMainWindow 
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qtguiversion.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidgetItem \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
+		..\PokemonTCG\pokemoncard.h \
+		..\PokemonTCG\card.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
+		..\PokemonTCG\type.h \
+		..\PokemonTCG\ability.h \
+		..\PokemonTCG\attack.h \
+		..\PokemonTCG\weakness.h \
+		..\PokemonTCG\resistance.h \
 		..\PokemonTCG\mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\bin\moc.exe
 	C:\Qt\5.7\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/5.7/msvc2015_64/mkspecs/win32-msvc2015 -I"C:/Users/nizar/Dropbox/Dev/GitHub Repo/PokemonTCG/PokemonTCG" -IC:/Qt/5.7/msvc2015_64/include -IC:/Qt/5.7/msvc2015_64/include/QtWidgets -IC:/Qt/5.7/msvc2015_64/include/QtGui -IC:/Qt/5.7/msvc2015_64/include/QtANGLE -IC:/Qt/5.7/msvc2015_64/include/QtCore -I. ..\PokemonTCG\mainwindow.h -o release\moc_mainwindow.cpp
@@ -954,6 +977,30 @@ release\moc_cardview.cpp: C:\Qt\5.7\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qtguiversion.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidgetItem \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
+		..\PokemonTCG\pokemoncard.h \
+		..\PokemonTCG\card.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
+		..\PokemonTCG\type.h \
+		..\PokemonTCG\ability.h \
+		..\PokemonTCG\attack.h \
+		..\PokemonTCG\weakness.h \
+		..\PokemonTCG\resistance.h \
 		..\PokemonTCG\cardview.h \
 		C:\Qt\5.7\msvc2015_64\bin\moc.exe
 	C:\Qt\5.7\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/5.7/msvc2015_64/mkspecs/win32-msvc2015 -I"C:/Users/nizar/Dropbox/Dev/GitHub Repo/PokemonTCG/PokemonTCG" -IC:/Qt/5.7/msvc2015_64/include -IC:/Qt/5.7/msvc2015_64/include/QtWidgets -IC:/Qt/5.7/msvc2015_64/include/QtGui -IC:/Qt/5.7/msvc2015_64/include/QtANGLE -IC:/Qt/5.7/msvc2015_64/include/QtCore -I. ..\PokemonTCG\cardview.h -o release\moc_cardview.cpp
@@ -1300,6 +1347,29 @@ release\main.obj: ..\PokemonTCG\main.cpp ../PokemonTCG/mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qtguiversion.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidgetItem \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QApplication \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdesktopwidget.h
@@ -1621,6 +1691,29 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qtguiversion.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidgetItem \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h \
 		ui_mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QAction \
@@ -1638,17 +1731,6 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QHeaderView \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLabel \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlabel.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLineEdit \
@@ -1666,14 +1748,7 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtoolbar.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QVBoxLayout \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QWidget \
-		..\PokemonTCG\pokemonCard.h \
-		../PokemonTCG/card.h \
-		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
-		../PokemonTCG/type.h \
-		../PokemonTCG/ability.h \
-		../PokemonTCG/attack.h \
-		../PokemonTCG/weakness.h \
-		../PokemonTCG/resistance.h
+		..\PokemonTCG\pokemonCard.h
 
 release\ability.obj: ..\PokemonTCG\ability.cpp ../PokemonTCG/ability.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
@@ -2382,6 +2457,30 @@ release\cardview.obj: ..\PokemonTCG\cardview.cpp ../PokemonTCG/cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qdesktopservices.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qvalidator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qtguiversion.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidgetItem \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabwidget.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h \
 		ui_cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QAction \
@@ -2399,29 +2498,9 @@ release\cardview.obj: ..\PokemonTCG\cardview.cpp ../PokemonTCG/cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QHeaderView \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qheaderview.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemview.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qframe.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractitemdelegate.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyleoption.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractspinbox.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qslider.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractslider.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qstyle.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtabwidget.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qrubberband.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLabel \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlabel.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLineEdit \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlineedit.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QPushButton \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qpushbutton.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidget \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidget.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreeview.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qtreewidgetitemiterator.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QVBoxLayout \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QWidget
 
