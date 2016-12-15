@@ -19,6 +19,13 @@ private:
     int nrOfWeaknesses;
     int nrOfResistances;
 
+    int retreatCostsCapacity;
+    int abilitiesCapacity;
+    int typesCapacity;
+    int attacksCapacity;
+    int weaknessesCapacity;
+    int resistancesCapacity;
+
     Type** retreatCosts;
     Ability** abilities;
     Type** types;
@@ -30,7 +37,7 @@ private:
 public:
     // Constructors
     PokemonCard();
-    PokemonCard(int hp, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode);
+    PokemonCard(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode);
 
     // Setters
     void setHP(int hp);

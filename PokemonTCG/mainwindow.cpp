@@ -10,9 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //poke = new PokemonCard();
     pokeAlbum = new Album();
-    QString pokeID = "54";
-    pokeAlbum->addCard(pokeID);
-    poke = pokeAlbum->getCard(0);
 }
 
 MainWindow::~MainWindow()
@@ -23,6 +20,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonFindPokemon_clicked()
 {
+    QString pokeID = ui->lineEditFindPokemon->text();
+    pokeAlbum->addCard(pokeID);
+    poke = pokeAlbum->getCard(0);
     cv = new CardView(this, poke);
     cv->show();
 }

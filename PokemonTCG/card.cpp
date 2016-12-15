@@ -19,7 +19,7 @@ Card::Card()
 }
 
 // Overloaded constructor
-Card::Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status)
+Card::Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode)
 {
     this->id = id;
     this->name = name;
@@ -35,8 +35,6 @@ Card::Card(QString id, QString name, QString imageURL, QString subtype, QString 
     this->series = series;
     this->set = set;
     this->setCode = setCode;
-    this->condition = condition;
-    this->status = status;
 }
 
 

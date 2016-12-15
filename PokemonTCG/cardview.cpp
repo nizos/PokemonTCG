@@ -8,12 +8,6 @@ CardView::CardView(QWidget *parent, Card* poke) :
     ui->setupUi(this);
     ui->treeWidgetFull->setColumnCount(2);
 
-    // Display card image
-    QString imgPath = ":/cards/Images/1.png";
-    QPixmap pokePic = (imgPath);
-    ui->labelCardImage->setPixmap(pokePic);
-
-
     // Display data
     AddMain("ID", poke->getID());
     AddMain("Name", poke->getName());
@@ -28,6 +22,13 @@ CardView::CardView(QWidget *parent, Card* poke) :
     AddUser("Status", poke->getStatus());
     AddUser("Condition", poke->getCondition());
     AddUser("Album", "pokeAlbum");
+
+    // Display card image
+    QString imgPath = ":/cards/Images/";
+    imgPath.append(QString::number(poke->getNumber()));
+    imgPath.append(".png");
+    QPixmap pokePic = (imgPath);
+    ui->labelCardImage->setPixmap(pokePic);
 
 
     QTreeWidgetItem *abilitiesPntr = new QTreeWidgetItem(ui->treeWidgetFull);

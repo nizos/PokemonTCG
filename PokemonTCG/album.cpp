@@ -23,18 +23,18 @@ Album::Album(QString albumName)
 void Album::addCard(QString id)
 {
     // Card info
+    int number;
+    QString nrString;
     QString name;
-    QString iD;
+    QString cardId;
     QString subtype;
     QString supertype;
-    QString hP;
-    QString number;
     QString artist;
     QString rarity;
     QString series;
     QString set;
     QString setCode;
-    QString imgUrl;
+    QString imageUrl;
 
     // User info
     QString status;
@@ -86,32 +86,38 @@ void Album::addCard(QString id)
 
     // Set values for card variables
     name = cardRootValues.value("name").toString();
-    iD = cardRootValues.value("id").toString();
+    cardId = cardRootValues.value("id").toString();
     subtype = cardRootValues.value("subtype").toString();
     supertype = cardRootValues.value("supertype").toString();
-    number = cardRootValues.value("number").toString();
+    nrString = cardRootValues.value("number").toString();
+    number = nrString.toInt();
     artist = cardRootValues.value("artist").toString();
     rarity = cardRootValues.value("rarity").toString();
     series = cardRootValues.value("series").toString();
     set = cardRootValues.value("set").toString();
     setCode = cardRootValues.value("setCode").toString();
-    imgUrl = cardRootValues.value("imageURL").toString();
+    imageUrl = cardRootValues.value("imageURL").toString();
 
     // Create Card instance from variables
-    Card* pokePntr = new PokemonCard(hp, cardDd, name, imageURL, subtype, supertype, number, artist, rarity, series, set, setCode);
+    Card* pokePntr = new PokemonCard(cardId, name, imageUrl, subtype, supertype, number, artist, rarity, series, set, setCode);
 
     // Add Card to Album
     cardsInAlbum[0] = pokePntr;
 
     /// TODO: Add if PokemonCard condition
     // Add PokemonCard values to card
+
+    // Set HP
+    hp = cardRootValues.value("hp").toInt();
+    dynamic_cast<PokemonCard*>(pokePntr)->setHP(hp);
+
     // Abilities
     QJsonValue abilitiesValue = cardRootValues.value(QString("ability"));
     QJsonObject abilityObject = abilitiesValue.toObject();
     /// TODO: Add if has value
     abilityName = abilityObject.value("name").toString();
     abilityText = abilityObject.value("text").toString();
-    abilityType << abilityObject.value("type").toString();
+    abilityType = abilityObject.value("type").toString();
     dynamic_cast<PokemonCard*>(pokePntr)->addAbility(abilityName, abilityText, abilityType);
 
     // Attacks
@@ -146,7 +152,7 @@ void Album::addCard(QString id)
     {
         QJsonValue retreatCostValue = retreatCostsArray.at(i).toString();
         retreatTypeName = retreatCostValue.toString();
-        /// TODO: Add dynamic_cast<PokemonCard*>(pokePntr)->addRetreatCost(retreatTypeName);
+        dynamic_cast<PokemonCard*>(pokePntr)->addRetreatCost(retreatTypeName);
     }
 
     // Types
