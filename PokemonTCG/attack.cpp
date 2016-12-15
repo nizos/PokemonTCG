@@ -20,6 +20,32 @@ Attack::Attack(QString attackCost, QString attackName, QString attackText, QStri
     this->attackConvertedEnergyCost = attackConvertedEnergyCost;
 }
 
+// Copy constructor
+Attack::Attack(Attack& source)
+{
+    this->attackCost = source.attackCost;
+    this->attackName = source.attackName;
+    this->attackText = source.attackText;
+    this->attackDamage = source.attackDamage;
+    this->attackConvertedEnergyCost = source.attackConvertedEnergyCost;
+}
+
+// Assignment operator
+Attack& Attack::operator=(Attack& source)
+{
+    if (this != &source)
+    {
+        this->attackCost = source.attackCost;
+        this->attackName = source.attackName;
+        this->attackText = source.attackText;
+        this->attackDamage = source.attackDamage;
+        this->attackConvertedEnergyCost = source.attackConvertedEnergyCost;
+    }
+    return *this;
+}
+
+
+
 // Setters
 void Attack::setAttackCost(QString attackCost)
 {

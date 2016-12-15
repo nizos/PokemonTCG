@@ -14,6 +14,25 @@ Resistance::Resistance(QString resistanceType, QString resistanceValue)
     this->resistanceValue = resistanceValue;
 }
 
+
+// Copy constructor
+Resistance::Resistance(Resistance& source)
+{
+    this->resistanceType = source.resistanceType;
+    this->resistanceValue = source.resistanceValue;
+}
+
+// Assignment operator
+Resistance& Resistance::operator=(Resistance& source)
+{
+    if (this != &source)
+    {
+        this->resistanceType = source.resistanceType;
+        this->resistanceValue = source.resistanceValue;
+    }
+    return *this;
+}
+
 // Setters
 void Resistance::setResistanceType(QString resistanceType)
 {

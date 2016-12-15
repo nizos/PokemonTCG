@@ -16,6 +16,12 @@ public:
     // Overloaded constructor
     Type(QString typeName);
 
+    // Copy constructor
+    Type(Type& source);
+
+    // Assignment operator
+    Type& operator=(Type& source);
+
     // Setters
     void setTypeName(QString typeName);
 

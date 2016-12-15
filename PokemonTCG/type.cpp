@@ -11,6 +11,21 @@ Type::Type(QString typeName)
 {
     this->typeName = typeName;
 }
+// Copy constructor
+Type::Type(Type& source)
+{
+    this->typeName = source.typeName;
+}
+
+// Assignment operator
+Type& Type::operator=(Type& source)
+{
+    if (this != &source)
+    {
+        this->typeName = source.typeName;
+    }
+    return *this;
+}
 
 // Setters
 void Type::setTypeName(QString typeName)

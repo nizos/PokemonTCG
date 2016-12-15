@@ -8,6 +8,7 @@
 #include "cardview.h"
 #include "pokemoncard.h"
 #include "album.h"
+#include "library.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,7 @@ private:
     CardView *cv;
     Card *poke;
     Album *pokeAlbum;
+    Library *library;
 
 };
 

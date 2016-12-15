@@ -4,20 +4,57 @@
 Album::Album()
 {
     this->albumName = "ALbum name";
-    this->nrOfCards = 1;
-    this->cardsInAlbum = new Card*[nrOfCards];
-    this->cardsInAlbum[0] = new Card();
-
+    this->nrOfCards = 0;
+    this->albumCapacity = 10;
+    this->cardsInAlbum = new Card*[albumCapacity];
 }
 
 // Overloaded constructor
 Album::Album(QString albumName)
 {
     this->albumName = albumName;
-    Card* cardPntr = new Card();
-    this->cardsInAlbum[0]= cardPntr;
-    this->nrOfCards = 1;
+    this->nrOfCards = 0;
+    this->albumCapacity = 10;
+    this->cardsInAlbum = new Card*[albumCapacity];
 }
+
+// Copy constructor
+Album::Album(Album& source)
+{
+    this->albumName = source.albumName;
+    this->nrOfCards = source.nrOfCards;
+    this->albumCapacity = source.albumCapacity;
+
+    this->cardsInAlbum = new Card*[this->albumCapacity];
+    for (int i = 0; i < this->nrOfCards; i++)
+    {
+        this->cardsInAlbum[i] = new Card(*source.cardsInAlbum[i]);
+    }
+
+}
+
+// Assignment operator
+Album& Album::operator=(Album& source)
+{
+    if (this != &source)
+    {
+        for (int i = 0; i < this->nrOfCards; i++)
+        {
+            delete this->cardsInAlbum[i];
+        }
+        delete[] this->cardsInAlbum;
+
+        this->albumName = source.albumName;
+        this->nrOfCards = source.nrOfCards;
+        this->albumCapacity = source.albumCapacity;
+        for (int i = 0; i < this->nrOfCards; i++)
+        {
+            this->cardsInAlbum[i] = new Card(*source.cardsInAlbum[i]);
+        }
+    }
+    return *this;
+}
+
 
 // Modifiers
 void Album::addCard(QString id)
@@ -99,10 +136,29 @@ void Album::addCard(QString id)
     imageUrl = cardRootValues.value("imageURL").toString();
 
     // Create Card instance from variables
-    Card* pokePntr = new PokemonCard(cardId, name, imageUrl, subtype, supertype, number, artist, rarity, series, set, setCode);
+    Card* pokePntr = nullptr;
+    if(nrOfCards < albumCapacity)
+    {
+        pokePntr = new PokemonCard(cardId, name, imageUrl, subtype, supertype, number, artist, rarity, series, set, setCode);
+    }
+    else
+    {
+        Card** tempCardsAlbum = new Card*[albumCapacity+1];
+        for(int i = 0; i < nrOfCards; i++)
+        {
+            Card* cardPntr = this->getCard(i);
+            tempCardsAlbum[i] = cardPntr;
+
+        }
+        cardsInAlbum = tempCardsAlbum;
+        pokePntr = new PokemonCard(cardId, name, imageUrl, subtype, supertype, number, artist, rarity, series, set, setCode);
+        albumCapacity++;
+    }
+
 
     // Add Card to Album
-    cardsInAlbum[0] = pokePntr;
+    cardsInAlbum[nrOfCards] = pokePntr;
+    nrOfCards++;
 
     /// TODO: Add if PokemonCard condition
     // Add PokemonCard values to card

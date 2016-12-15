@@ -14,6 +14,24 @@ Weakness::Weakness(QString weaknessType, QString weaknessValue)
     this->weaknessValue = weaknessValue;
 }
 
+// Copy constructor
+Weakness::Weakness(Weakness& source)
+{
+    this->weaknessType = source.weaknessType;
+    this->weaknessValue = source.weaknessValue;
+}
+
+// Assignment operator
+Weakness& Weakness::operator=(Weakness& source)
+{
+    if (this != &source)
+    {
+        this->weaknessType = source.weaknessType;
+        this->weaknessValue = source.weaknessValue;
+    }
+    return *this;
+}
+
 // Getters
 QString Weakness::getWeaknessType()
 {

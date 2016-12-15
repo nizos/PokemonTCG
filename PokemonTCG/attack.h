@@ -18,6 +18,13 @@ public:
     // Overloaded constructor
     Attack(QString attackCost, QString attackName, QString attackText, QString attackDamage, QString attackConvertedEnergyCost);
 
+    // Copy constructor
+    Attack(Attack& source);
+
+    // Assignment operator
+    Attack& operator=(Attack& source);
+
+
     // Setters
     void setAttackCost(QString attackCost);
     void setAttackName(QString attackName);

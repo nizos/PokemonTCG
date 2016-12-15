@@ -768,6 +768,7 @@ release\moc_mainwindow.cpp: C:\Qt\5.7\msvc2015_64\include\QtWidgets\QMainWindow 
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		..\PokemonTCG\library.h \
 		..\PokemonTCG\mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\bin\moc.exe
 	C:\Qt\5.7\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/5.7/msvc2015_64/mkspecs/win32-msvc2015 -I"C:/Users/nizar/Dropbox/Dev/GitHub Repo/PokemonTCG/PokemonTCG" -IC:/Qt/5.7/msvc2015_64/include -IC:/Qt/5.7/msvc2015_64/include/QtWidgets -IC:/Qt/5.7/msvc2015_64/include/QtGui -IC:/Qt/5.7/msvc2015_64/include/QtANGLE -IC:/Qt/5.7/msvc2015_64/include/QtCore -I. ..\PokemonTCG\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1482,6 +1483,7 @@ release\main.obj: ..\PokemonTCG\main.cpp ../PokemonTCG/mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		../PokemonTCG/library.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QApplication \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdesktopwidget.h
@@ -1833,6 +1835,7 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		../PokemonTCG/library.h \
 		ui_mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QAction \
@@ -1843,11 +1846,12 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QButtonGroup \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qbuttongroup.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QHBoxLayout \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QGridLayout \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlayout.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlayoutitem.h \
-		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QHBoxLayout \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QHeaderView \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLabel \

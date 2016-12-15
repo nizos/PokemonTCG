@@ -16,8 +16,6 @@ private:
     QString series;
     QString set;
     QString setCode;
-    QString condition;
-    QString status;
 
 
 public:
@@ -26,6 +24,12 @@ public:
 
     // Overloaded constructor
     Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode);
+
+    // Copy constructor
+    Card(const Card& source);
+
+    // Assignment operator
+    Card& operator=(const Card& source);
 
     // Setters
     void setID(QString id);

@@ -17,6 +17,7 @@ private:
     Card** cardsInAlbum;
     QString albumName;
     int nrOfCards;
+    int albumCapacity;
 
 public:
     // Default constructor
@@ -24,6 +25,12 @@ public:
 
     // Overloaded constructor
     Album(QString albumName);
+
+    // Copy constructor
+    Album(Album& source);
+
+    // Assignment operator
+    Album& operator=(Album& source);
 
     // Modifiers
     void addCard(QString id);

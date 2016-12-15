@@ -8,6 +8,7 @@ class Library
 private:
     Album** albumsInLibrary;
     int nrOfAlbums;
+    int libraryCapacity;
 
 public:
     // Default constructor
@@ -15,6 +16,12 @@ public:
 
     // Overloaded constructor
     Library(int nrOfAlbums);
+
+    // Copy constructor
+    Library(Library& source);
+
+    // Assignment operator
+    Library& operator=(Library& source);
 
     // Modifiers
     void addAlbum();

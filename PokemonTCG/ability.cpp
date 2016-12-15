@@ -16,6 +16,27 @@ Ability::Ability(QString abilityName, QString abilityText, QString abilityType)
     this->abilityType = abilityType;
 }
 
+// Copy constructor
+Ability::Ability(Ability& source)
+{
+    this->abilityName = source.abilityName;
+    this->abilityText = source.abilityText;
+    this->abilityType = source.abilityType;
+}
+
+// Assignment operator
+Ability& Ability::operator=(Ability& source)
+{
+    if (this != &source)
+    {
+        this->abilityName = source.abilityName;
+        this->abilityText = source.abilityText;
+        this->abilityType = source.abilityType;
+    }
+    return *this;
+}
+
+
 // Setters
 void Ability::setAbilityName(QString name)
 {

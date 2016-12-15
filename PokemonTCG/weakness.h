@@ -15,6 +15,12 @@ public:
     // Overloaded constructor
     Weakness(QString weaknessType, QString weaknessValue);
 
+    // Copy constructor
+    Weakness(Weakness& source);
+
+    // Assignment operator
+    Weakness& operator=(Weakness& source);
+
     // Setters
     void setWeaknessType(QString weaknessType);
     void setWeaknessValue(QString weaknessValue);

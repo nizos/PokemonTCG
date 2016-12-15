@@ -73,8 +73,256 @@ PokemonCard::PokemonCard(QString id, QString name, QString imageURL, QString sub
     this->retreatCosts = new Type*[retreatCostsCapacity];
 }
 
+// Copy constructor
+PokemonCard::PokemonCard(PokemonCard& source)
+{
+
+    this->setID(source.getID());
+    this->setName(source.getName());
+    this->setImageURL(source.getImageURL());
+    this->setSubtype(source.getSubtype());
+    this->setSupertype(source.getSupertype());
+    this->setNumber(source.getNumber());
+    this->setArtist(source.getArtist());
+    this->setRarity(source.getRarity());
+    this->setSeries(source.getSeries());
+    this->setSet(source.getSet());
+    this->setSetCode(source.getSetCode());
+    this->hp = source.getHP();
+
+    // Abilities
+    this->nrOfAbilities = source.nrOfAbilities;
+    this->abilitiesCapacity = source.abilitiesCapacity;
+    this->abilities = new Ability*[abilitiesCapacity];
+    for(int i = 0; i < nrOfAbilities; i++)
+    {
+        this->abilities[i] = new Ability(*source.abilities[i]);
+    }
+
+    // Attacks
+    this->nrOfAttacks = source.nrOfAttacks;
+    this->attacksCapacity = source.attacksCapacity;
+    this->attacks = new Attack*[attacksCapacity];
+    for(int i = 0; i < nrOfAttacks; i++)
+    {
+        this->attacks[i] = new Attack(*source.attacks[i]);
+    }
+
+    // Retreat costs
+    this->nrOfRetreatCosts = source.nrOfRetreatCosts;
+    this->retreatCostsCapacity = source.retreatCostsCapacity;
+    this->retreatCosts = new Type*[retreatCostsCapacity];
+    for(int i = 0; i < nrOfRetreatCosts; i++)
+    {
+        this->retreatCosts[i] = new Type(*source.retreatCosts[i]);
+    }
+
+    // Resistances
+    this->nrOfResistances = source.nrOfResistances;
+    this->resistancesCapacity = source.resistancesCapacity;
+    this->resistances = new Resistance*[resistancesCapacity];
+    for(int i = 0; i < nrOfResistances; i++)
+    {
+        this->resistances[i] = new Resistance(*source.resistances[i]);
+    }
+
+    // Types
+    this->nrOfTypes = source.nrOfTypes;
+    this->typesCapacity = source.typesCapacity;
+    this->types = new Type*[typesCapacity];
+    for(int i = 0; i < nrOfTypes; i++)
+    {
+        this->types[i] = new Type(*source.types[i]);
+    }
+
+    // Weaknesses
+    this->nrOfWeaknesses = source.nrOfWeaknesses;
+    this->weaknessesCapacity = source.weaknessesCapacity;
+    this->weaknesses = new Weakness*[weaknessesCapacity];
+    for(int i = 0; i < nrOfWeaknesses; i++)
+    {
+        this->weaknesses[i] = new Weakness(*source.weaknesses[i]);
+    }
+}
+
+// Assignment operator
+PokemonCard& PokemonCard::operator=(PokemonCard& source)
+{
+
+    if (this != &source)
+    {
+        // Abilities
+        for (int i = 0; i < this->nrOfAbilities; i++)
+        {
+            delete this->abilities[i];
+        }
+        delete[] this->abilities;
+
+        // Attacks
+        for (int i = 0; i < this->nrOfAttacks; i++)
+        {
+            delete this->attacks[i];
+        }
+        delete[] this->attacks;
+
+        // Retreat costs
+        for (int i = 0; i < this->nrOfRetreatCosts; i++)
+        {
+            delete this->retreatCosts[i];
+        }
+        delete[] this->retreatCosts;
+
+        // Resistances
+        for (int i = 0; i < this->nrOfResistances; i++)
+        {
+            delete this->resistances[i];
+        }
+        delete[] this->resistances;
+
+        // Types
+        for (int i = 0; i < this->nrOfTypes; i++)
+        {
+            delete this->types[i];
+        }
+        delete[] this->types;
+
+        // Weaknesses
+        for (int i = 0; i < this->nrOfWeaknesses; i++)
+        {
+            delete this->weaknesses[i];
+        }
+        delete[] this->weaknesses;
+
+        this->setID(source.getID());
+        this->setName(source.getName());
+        this->setImageURL(source.getImageURL());
+        this->setSubtype(source.getSubtype());
+        this->setSupertype(source.getSupertype());
+        this->setNumber(source.getNumber());
+        this->setArtist(source.getArtist());
+        this->setRarity(source.getRarity());
+        this->setSeries(source.getSeries());
+        this->setSet(source.getSet());
+        this->setSetCode(source.getSetCode());
+        this->hp = source.getHP();
+        this->hp = source.hp;
+
+        // Abilities
+        this->nrOfAbilities = source.nrOfAbilities;
+        this->abilitiesCapacity = source.abilitiesCapacity;
+        this->abilities = new Ability*[abilitiesCapacity];
+        for(int i = 0; i < nrOfAbilities; i++)
+        {
+            this->abilities[i] = new Ability(*source.abilities[i]);
+        }
+
+        // Attacks
+        this->nrOfAttacks = source.nrOfAttacks;
+        this->attacksCapacity = source.attacksCapacity;
+        this->attacks = new Attack*[attacksCapacity];
+        for(int i = 0; i < nrOfAttacks; i++)
+        {
+            this->attacks[i] = new Attack(*source.attacks[i]);
+        }
+
+        // Retreat costs
+        this->nrOfRetreatCosts = source.nrOfRetreatCosts;
+        this->retreatCostsCapacity = source.retreatCostsCapacity;
+        this->retreatCosts = new Type*[retreatCostsCapacity];
+        for(int i = 0; i < nrOfRetreatCosts; i++)
+        {
+            this->retreatCosts[i] = new Type(*source.retreatCosts[i]);
+        }
+
+        // Resistances
+        this->nrOfResistances = source.nrOfResistances;
+        this->resistancesCapacity = source.resistancesCapacity;
+        this->resistances = new Resistance*[resistancesCapacity];
+        for(int i = 0; i < nrOfResistances; i++)
+        {
+            this->resistances[i] = new Resistance(*source.resistances[i]);
+        }
+
+        // Types
+        this->nrOfTypes = source.nrOfTypes;
+        this->typesCapacity = source.typesCapacity;
+        this->types = new Type*[typesCapacity];
+        for(int i = 0; i < nrOfTypes; i++)
+        {
+            this->types[i] = new Type(*source.types[i]);
+        }
+
+        // Weaknesses
+        this->nrOfWeaknesses = source.nrOfWeaknesses;
+        this->weaknessesCapacity = source.weaknessesCapacity;
+        this->weaknesses = new Weakness*[weaknessesCapacity];
+        for(int i = 0; i < nrOfWeaknesses; i++)
+        {
+            this->weaknesses[i] = new Weakness(*source.weaknesses[i]);
+        }
+
+    }
+    return *this;
+}
 
 // Setters
+
+// Setters
+void PokemonCard::setID(QString id)
+{
+    Card::setID(id);
+}
+
+void PokemonCard::setName(QString name)
+{
+    Card::setName(name);
+}
+
+void PokemonCard::setImageURL(QString imageURL)
+{
+    Card::setImageURL(imageURL);
+}
+
+void PokemonCard::setSubtype(QString subtype)
+{
+    Card::setSubtype(subtype);
+}
+
+void PokemonCard::setSupertype(QString supertype)
+{
+    Card::setSupertype(supertype);
+}
+
+void PokemonCard::setNumber(int number)
+{
+    Card::setNumber(number);
+}
+
+void PokemonCard::setArtist(QString artist)
+{
+    Card::setArtist(artist);
+}
+
+void PokemonCard::setRarity(QString rarity)
+{
+    Card::setRarity(rarity);
+}
+
+void PokemonCard::setSeries(QString series)
+{
+    Card::setSeries(series);
+}
+
+void PokemonCard::setSet(QString set)
+{
+    Card::setSet(set);
+}
+
+void PokemonCard::setSetCode(QString setCode)
+{
+    Card::setSetCode(setCode);
+}
+
 void PokemonCard::setHP(int hp)
 {
     this->hp = hp;
@@ -111,6 +359,63 @@ void PokemonCard::setNrOfResistances(int nrOfResistances)
 }
 
 // Getters
+
+//// Getters
+//QString PokemonCard::getID()
+//{
+//    return this->Card::getID();
+//}
+
+//QString PokemonCard::getName()
+//{
+//    return this->Card::getName();
+//}
+
+//QString PokemonCard::getImageURL()
+//{
+//    return this->Card::getImageURL();
+//}
+
+//QString PokemonCard::getSubtype()
+//{
+//    return this->Card::getSubtype();
+//}
+
+//QString PokemonCard::getSupertype()
+//{
+//    return this->Card::getSupertype();
+//}
+
+//int PokemonCard::getNumber()
+//{
+//    return this->Card::getNumber();
+//}
+
+//QString PokemonCard::getArtist()
+//{
+//    return this->Card::getArtist();
+//}
+
+//QString PokemonCard::getRarity()
+//{
+//    return this->Card::getRarity();
+//}
+
+//QString PokemonCard::getSeries()
+//{
+//    return this->Card::getSeries();
+//}
+
+//QString PokemonCard::getSet()
+//{
+//    return this->Card::getSet();
+//}
+
+//QString PokemonCard::getSetCode()
+//{
+//    return this->Card::getSetCode();
+//}
+
 int PokemonCard::getHP()
 {
     return this->hp;

@@ -16,6 +16,12 @@ public:
     // Overloaded constructor
     Ability(QString abilityName, QString abilityText, QString abilityType);
 
+    // Copy constructor
+    Ability(Ability& source);
+
+    // Assignment operator
+    Ability& operator=(Ability& source);
+
     // Setters
     void setAbilityName(QString abilityName);
     void setAbilityText(QString abilityText);

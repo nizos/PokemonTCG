@@ -19,8 +19,8 @@ CardView::CardView(QWidget *parent, Card* poke) :
     AddMain("Series", poke->getSeries());
     AddMain("Set", poke->getSet());
     AddMain("Set code", poke->getSetCode());
-    AddUser("Status", poke->getStatus());
-    AddUser("Condition", poke->getCondition());
+    AddUser("Status", " ");
+    AddUser("Condition", " ");
     AddUser("Album", "pokeAlbum");
 
     // Display card image

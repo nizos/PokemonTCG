@@ -15,6 +15,14 @@ public:
     // Overloaded constructor
     Resistance(QString resistanceType, QString resistanceValue);
 
+
+    // Copy constructor
+    Resistance(Resistance& source);
+
+    // Assignment operator
+    Resistance& operator=(Resistance& source);
+
+
     // Setters
     void setResistanceType(QString resistanceType);
     void setResistanceValue(QString resistanceValue);

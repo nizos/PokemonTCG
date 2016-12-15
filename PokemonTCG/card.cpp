@@ -14,8 +14,6 @@ Card::Card()
     this->series = "Default Series";
     this->set = "Default Set";
     this->setCode = "Default SetCode";
-    this->condition = "Default Condition";
-    this->status = "Default Status";
 }
 
 // Overloaded constructor
@@ -37,6 +35,41 @@ Card::Card(QString id, QString name, QString imageURL, QString subtype, QString 
     this->setCode = setCode;
 }
 
+// Copy constructor
+Card::Card(const Card& source)
+{
+    this->id = source.id;
+    this->name = source.name;
+    this->imageURL = source.imageURL;
+    this->subtype = source.subtype;
+    this->supertype = source.supertype;
+    this->number = source.number;
+    this->artist = source.artist;
+    this->rarity = source.rarity;
+    this->series = source.series;
+    this->set = source.set;
+    this->setCode = source.setCode;
+}
+
+// Assignment operator
+Card& Card::operator=(const Card& source)
+{
+    if (this != &source)
+    {
+    this->id = source.id;
+    this->name = source.name;
+    this->imageURL = source.imageURL;
+    this->subtype = source.subtype;
+    this->supertype = source.supertype;
+    this->number = source.number;
+    this->artist = source.artist;
+    this->rarity = source.rarity;
+    this->series = source.series;
+    this->set = source.set;
+    this->setCode = source.setCode;
+    }
+    return *this;
+}
 
 // Setters
 void Card::setID(QString id)
@@ -94,16 +127,6 @@ void Card::setSetCode(QString setCode)
     this->setCode = setCode;
 }
 
-void Card::setCondition(QString condition)
-{
-    this->condition = condition;
-}
-
-void Card::setStatus(QString status)
-{
-    this->status = status;
-}
-
 // Getters
 QString Card::getID()
 {
@@ -158,16 +181,6 @@ QString Card::getSet()
 QString Card::getSetCode()
 {
     return this->setCode;
-}
-
-QString Card::getCondition()
-{
-    return this->condition;
-}
-
-QString Card::getStatus()
-{
-    return this->status;
 }
 
 // toString

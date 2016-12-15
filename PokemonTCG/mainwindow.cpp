@@ -10,6 +10,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //poke = new PokemonCard();
     pokeAlbum = new Album();
+
+//    library = new Library();
+//    library->addAlbum();
+
+//    pokeAlbum = new Album();
+
+//    ui->labelNameAlbum1->setText(pokeAlbum->getAlbumName());
 }
 
 MainWindow::~MainWindow()
