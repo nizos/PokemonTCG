@@ -6,61 +6,51 @@ PokemonCard::PokemonCard() : Card()
     this->hp = 10;
 
     // Abilities
-    this->nrOfAbilities = 1;
+    this->nrOfAbilities = 0;
     this->abilities = new Ability*[nrOfAbilities];
-    abilities[0] = new Ability();
 
     // Types
-    this->nrOfTypes = 1;
+    this->nrOfTypes = 0;
     this->types = new Type*[nrOfTypes];
-    types[0] = new Type();
 
     // Attacks
-    this->nrOfAttacks = 1;
+    this->nrOfAttacks = 0;
     this->attacks = new Attack*[nrOfAttacks];
-    attacks[0] = new Attack();
 
     // Weaknesses
-    this->nrOfWeaknesses = 1;
+    this->nrOfWeaknesses = 0;
     this->weaknesses = new Weakness*[nrOfWeaknesses];
-    weaknesses[0] = new Weakness();
 
     // Resistances
-    this->nrOfResistances = 1;
+    this->nrOfResistances = 0;
     this->resistances = new Resistance*[nrOfResistances];
-    resistances[0] = new Resistance();
 }
 
-PokemonCard::PokemonCard(int hp, int nrOfAbilities,int nrOfRetreatCosts, int nrOfTypes, int nrOfAttacks, int nrOfWeaknesses, int nrOfResistances, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status)
+PokemonCard::PokemonCard(int hp, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode)
     : Card(id, name, imageURL, subtype, supertype, number, artist, rarity, series, set, setCode, condition, status)
 {
     // Health
     this->hp = hp;
 
     // Abilities
-    this->nrOfAbilities = nrOfAbilities;
+    this->nrOfAbilities = 0;
     this->abilities = new Ability*[nrOfAbilities];
-    abilities[0] = new Ability();
 
     // Types
-    this->nrOfTypes = nrOfTypes;
+    this->nrOfTypes = 0;
     this->types = new Type*[nrOfTypes];
-    types[0] = new Type();
 
     // Attacks
-    this->nrOfAttacks = nrOfAttacks;
+    this->nrOfAttacks = 0;
     this->attacks = new Attack*[nrOfAttacks];
-    attacks[0] = new Attack();
 
     // Weaknesses
-    this->nrOfWeaknesses = nrOfWeaknesses;
+    this->nrOfWeaknesses = 0;
     this->weaknesses = new Weakness*[nrOfWeaknesses];
-    weaknesses[0] = new Weakness();
 
     // Resistances
-    this->nrOfResistances = nrOfResistances;
+    this->nrOfResistances = 0;
     this->resistances = new Resistance*[nrOfResistances];
-    resistances[0] = new Resistance();
 }
 
 

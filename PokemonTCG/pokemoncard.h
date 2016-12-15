@@ -30,7 +30,7 @@ private:
 public:
     // Constructors
     PokemonCard();
-    PokemonCard(int hp, int nrOfAbilities, int nrOfRetreatCosts, int nrOfTypes, int nrOfAttacks, int nrOfWeaknesses, int nrOfResistances, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status);
+    PokemonCard(int hp, QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode);
 
     // Setters
     void setHP(int hp);

@@ -25,7 +25,7 @@ public:
     Card();
 
     // Overloaded constructor
-    Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode, QString condition, QString status);
+    Card(QString id, QString name, QString imageURL, QString subtype, QString supertype, int number, QString artist, QString rarity, QString series, QString set, QString setCode);
 
     // Setters
     void setID(QString id);

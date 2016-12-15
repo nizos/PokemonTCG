@@ -22,6 +22,42 @@ Album::Album(QString albumName)
 // Modifiers
 void Album::addCard(QString id)
 {
+    // Card info
+    QString name;
+    QString iD;
+    QString subtype;
+    QString supertype;
+    QString hP;
+    QString number;
+    QString artist;
+    QString rarity;
+    QString series;
+    QString set;
+    QString setCode;
+    QString imgUrl;
+
+    // User info
+    QString status;
+    QString condition;
+    QString album;
+
+    // Pokemon info
+    int hp;
+    QString retreatTypeName;
+    QString abilityName;
+    QString abilityText;
+    QString abilityType;
+    QString typeName;
+    QString attackCost;
+    QString attackName;
+    QString attackText;
+    QString attackDamage;
+    QString attackConvertedEnergyCost;
+    QString weaknessType;
+    QString weaknessValue;
+    QString resistanceType;
+    QString resistanceValue;
+
     // Build file name
     QString fileName = ":/cards/JSON/xy7-";
     fileName.append(id);
@@ -35,195 +71,105 @@ void Album::addCard(QString id)
         return;
     }
 
-    // Save file information in QString fileText
+    // Save file information in fileText
     QTextStream in(&file);
     QString fileText = in.readAll();
 
     // Close file
     file.close();
 
-    // Create json document from fileText information
+    // Create card jsonObject from fileText
     QJsonDocument jsonDocument = QJsonDocument::fromJson(fileText.toUtf8());
     QJsonObject rootObject = jsonDocument.object();
     QJsonValue value = rootObject.value(QString("card"));
-
-
-    //qWarning() << value;
     QJsonObject cardRootValues = value.toObject();
 
+    // Set values for card variables
+    name = cardRootValues.value("name").toString();
+    iD = cardRootValues.value("id").toString();
+    subtype = cardRootValues.value("subtype").toString();
+    supertype = cardRootValues.value("supertype").toString();
+    number = cardRootValues.value("number").toString();
+    artist = cardRootValues.value("artist").toString();
+    rarity = cardRootValues.value("rarity").toString();
+    series = cardRootValues.value("series").toString();
+    set = cardRootValues.value("set").toString();
+    setCode = cardRootValues.value("setCode").toString();
+    imgUrl = cardRootValues.value("imageURL").toString();
+
+    // Create Card instance from variables
+    Card* pokePntr = new PokemonCard(hp, cardDd, name, imageURL, subtype, supertype, number, artist, rarity, series, set, setCode);
+
+    // Add Card to Album
+    cardsInAlbum[0] = pokePntr;
+
+    /// TODO: Add if PokemonCard condition
+    // Add PokemonCard values to card
     // Abilities
     QJsonValue abilitiesValue = cardRootValues.value(QString("ability"));
     QJsonObject abilityObject = abilitiesValue.toObject();
-    qDebug() << "Ability name: " << abilityObject.value("name").toString();
-    qDebug() << "Ability text: " << abilityObject.value("text").toString();
-    qDebug() << "Ability type: " << abilityObject.value("type").toString();
+    /// TODO: Add if has value
+    abilityName = abilityObject.value("name").toString();
+    abilityText = abilityObject.value("text").toString();
+    abilityType << abilityObject.value("type").toString();
+    dynamic_cast<PokemonCard*>(pokePntr)->addAbility(abilityName, abilityText, abilityType);
 
     // Attacks
     QJsonValue attacksValue = cardRootValues.value("attacks");
     QJsonArray attacksArray = attacksValue.toArray();
-    int nrOfAtk = 0;
     for(int i = 0; i < attacksArray.count(); i++)
     {
         QJsonObject attackObject = attacksArray.at(i).toObject();
-        qDebug() << "Attack name :" << attackObject.value("name").toString();
-        qDebug() << "Attack text: " << attackObject.value("text").toString();
-        qDebug() << "Attack damage: " << attackObject.value("damage").toString();
-        qDebug() << "Attack converted energy cost: " << attackObject.value("convertedEnergyCost").toString();
-        nrOfAtk++;
+        /// TODO: Add attackCost
+        attackName = attackObject.value("name").toString();
+        attackText = attackObject.value("text").toString();
+        attackDamage = attackObject.value("damage").toString();
+        attackConvertedEnergyCost = attackObject.value("convertedEnergyCost").toString();
+        dynamic_cast<PokemonCard*>(pokePntr)->addAttack(attackCost, attackName, attackText, attackDamage, attackConvertedEnergyCost);
     }
-    qDebug() << "Nr of attacks: " << QString::number(nrOfAtk);
 
     // Resistances
     QJsonValue resistancesValue = cardRootValues.value("resistances");
     QJsonArray resistancesArray = resistancesValue.toArray();
-    int nrOfRs = 0;
     for(int i = 0; i < resistancesArray.count(); i++)
     {
         QJsonObject resistanceObject = resistancesArray.at(i).toObject();
-        qDebug() << "Resistance type: " << resistanceObject.value("type").toString();
-        qDebug() << "Resistance value: " << resistanceObject.value("value").toString();
-        nrOfRs++;
+        resistanceType = resistanceObject.value("type").toString();
+        resistanceValue = resistanceObject.value("value").toString();
+        dynamic_cast<PokemonCard*>(pokePntr)->addResistance(resistanceType, resistanceValue);
     }
-    qDebug() << "Nr of resistances: " << QString::number(nrOfRs);
 
     // Retreat costs
     QJsonValue retreatCostsValue = cardRootValues.value("retreatCost");
     QJsonArray retreatCostsArray = retreatCostsValue.toArray();
-    int nrOfRC = 0;
-    qDebug() << "Retreat costs: " << retreatCostsArray;
     for(int i = 0; i < retreatCostsArray.count(); i++)
     {
         QJsonValue retreatCostValue = retreatCostsArray.at(i).toString();
-        qDebug() << "Retreat costs array: " << retreatCostValue.toString();
-        nrOfRC++;
+        retreatTypeName = retreatCostValue.toString();
+        /// TODO: Add dynamic_cast<PokemonCard*>(pokePntr)->addRetreatCost(retreatTypeName);
     }
-    qDebug() << "Nr of retreat costs: " << QString::number(nrOfRC);
 
     // Types
     QJsonValue typesValue = cardRootValues.value("types");
     QJsonArray typesArray = typesValue.toArray();
-    int nrOfTp = 0;
-    qDebug() << "Types: " << typesArray;
     for(int i = 0; i < typesArray.count(); i++)
     {
         QJsonValue typeValue = typesArray.at(i).toString();
-        qDebug() << "Types array: " << typeValue.toString();
-        nrOfTp++;
+        typeName = typeValue.toString();
+        dynamic_cast<PokemonCard*>(pokePntr)->addType(typeName);
     }
-    qDebug() << "Nr of types: " << QString::number(nrOfTp);
 
 
     // Weaknesses
     QJsonValue weaknessesValue = cardRootValues.value("weaknesses");
     QJsonArray weaknessesArray = weaknessesValue.toArray();
-    int nrOfWk = 0;
     for(int i = 0; i < weaknessesArray.count(); i++)
     {
         QJsonObject weaknessObject = weaknessesArray.at(i).toObject();
-        qDebug() << "Weakness type: " << weaknessObject.value("type").toString();
-        qDebug() << "Weakness value: " << weaknessObject.value("value").toString();
-        nrOfWk++;
+        weaknessType = weaknessObject.value("type").toString();
+        weaknessValue = weaknessObject.value("value").toString();
+        dynamic_cast<PokemonCard*>(pokePntr)->addWeakness(weaknessType, weaknessValue);
     }
-    qDebug() << "Nr of weaknesses: " << QString::number(nrOfWk);
-
-    // Main info
-    QString Name = cardRootValues["name"].toString();
-    QString ID = cardRootValues["id"].toString();
-    QString Subtype = cardRootValues["subtype"].toString();
-    QString Supertype = cardRootValues["supertype"].toString();
-    QString HP = cardRootValues["hp"].toString();
-    QString Number = cardRootValues["number"].toString();
-    QString Artist = cardRootValues["artist"].toString();
-    QString Rarity = cardRootValues["rarity"].toString();
-    QString Series = cardRootValues["series"].toString();
-    QString Set = cardRootValues["set"].toString();
-    QString SetCode = cardRootValues["setCode"].toString();
-    QString imgUrl = cardRootValues["imageUrl"].toString();
-    int nrOfAbilities = 1;
-    int nrOfRetreatCosts = 1;
-    int nrOfTypes = 1;
-    int nrOfAttacks = 1;
-    int nrOfWeaknesses = 1;
-    int nrOfResistances = 1;
-    int hp = 200;
-    QString cardDd = cardRootValues["id"].toString();
-    QString name = cardRootValues["name"].toString();
-    QString imageURL = cardRootValues["imageUrl"].toString();
-    QString subtype = cardRootValues["subtype"].toString();
-    QString supertype = cardRootValues["supertype"].toString();
-    int number = 55;
-    QString artist = cardRootValues["artist"].toString();
-    QString rarity = cardRootValues["artist"].toString();
-    QString series = cardRootValues["series"].toString();
-    QString set = cardRootValues["set"].toString();
-    QString setCode = cardRootValues["setCode"].toString();
-    QString condition = "condition";
-    QString status = "status";
-
-
-    Card* pokePntr = new PokemonCard(hp, nrOfAbilities, nrOfRetreatCosts, nrOfTypes,  nrOfAttacks, nrOfWeaknesses, nrOfResistances, cardDd, name, imageURL, subtype, supertype, number, artist, rarity, series, set, setCode, condition, status);
-    cardsInAlbum[0] = pokePntr;
-
-
-    QString retreatTypeName = "temp retreatTypeName";
-    QString abilityName = "temp abilityName";
-    QString abilityText = "temp abilityText";
-    QString abilityType = "temp abilityType";
-    QString typeName = "temp typeName";
-    QString attackCost = "temp attackCost";
-    QString attackName = "temp attackName";
-    QString attackText = "temp attackText";
-    QString attackDamage = "temp attackDamage";
-    QString attackConvertedEnergyCost = "temp attackConvertedEnergyCost";
-    QString weaknessType = "temp weaknessType";
-    QString weaknessValue = "temp weaknessValue";
-    QString resistanceType = "temp resistanceType";
-    QString resistanceValue = "temp resistanceValue";
-
-
-    dynamic_cast<PokemonCard*>(pokePntr)->addAbility(abilityName, abilityText, abilityType);
-    dynamic_cast<PokemonCard*>(pokePntr)->addType(typeName);
-
-//    dynamic_cast<PokemonCard*>(pokePntr)->addRetreatCost(retreatTypeName);
-
-    dynamic_cast<PokemonCard*>(pokePntr)->addAttack(attackCost, attackName, attackText, attackDamage, attackConvertedEnergyCost);
-
-    dynamic_cast<PokemonCard*>(pokePntr)->addWeakness(weaknessType, weaknessValue);
-
-    dynamic_cast<PokemonCard*>(pokePntr)->addResistance(resistanceType, resistanceValue);
-
-
-
-//    QJsonDocument d = QJsonDocument::fromJson(fileText.toUtf8());
-//    QJsonObject sett2 = d.object();
-//    QJsonValue value = sett2.value(QString("card"));
-//    //qWarning() << value;
-//    QJsonObject item = value.toObject();
-//    QString Name = item["name"].toString();
-
-
-
-
-
-//        QJsonValue  WeaknessType = item2.value(QString("type"));
-//        qDebug() << WeaknessType;
-//        QJsonArray  WeaknessValue = item2["value"].toArray();
-//        qDebug() << WeaknessValue;
-
-
-
-//        QFile file("main.json");
-//        file.open(QIODevice::ReadOnly | QIODevice::Text);
-//        QByteArray jsonData = file.readAll();
-//        file.close();
-
-//        QJsonDocument document = QJsonDocument::fromJson(jsonData);
-//        QJsonObject object = document.object();
-
-//        QJsonValue value = object.value("agentsArray");
-//        QJsonArray array = value.toArray();
-//        foreach (const QJsonValue & v, array)
-//            qDebug() << v.toObject().value("ID").toInt();
 }
 
 void Album::moveCard()
