@@ -17,7 +17,7 @@ class CardView : public QDialog
 
 public:
 
-    explicit CardView(QWidget *parent = 0, PokemonCard* poke = 0);
+    explicit CardView(QWidget *parent = 0, Card* poke = 0);
 
 
     void AddRoot(QString name, QString description);

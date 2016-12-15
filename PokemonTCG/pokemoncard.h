@@ -58,12 +58,12 @@ public:
     Resistance* getResistance(int pos);
 
     // Add
-    void addRetreatCost();
-    void addAbility();
-    void addType();
-    void addAttack();
-    void addWeakness();
-    void addResistance();
+    void addRetreatCost(QString retreatTypeName);
+    void addAbility(QString abilityName, QString abilityText, QString abilityType);
+    void addType(QString typeName);
+    void addAttack(QString attackCost, QString attackName, QString attackText, QString attackDamage, QString attackConvertedEnergyCost);
+    void addWeakness(QString weaknessType, QString weaknessValue);
+    void addResistance(QString resistanceType, QString resistanceValue);
 
     // Remove
     void removeRetreatCost();

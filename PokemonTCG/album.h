@@ -1,6 +1,14 @@
 #ifndef ALBUM_H
 #define ALBUM_H
 #include <QString>
+#include <QFile>
+#include <QDebug>
+#include <QTextStream>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QJsonValue>
+#include "pokemoncard.h"
 #include "card.h"
 
 class Album
@@ -18,7 +26,7 @@ public:
     Album(QString albumName);
 
     // Modifiers
-    void addCard();
+    void addCard(QString id);
     void moveCard();
     void removeCard();
 
@@ -29,6 +37,8 @@ public:
     // Getters
     int getNrOfCards();
     QString getAlbumName();
+
+    Card* getCard(int pos);
 
     //toString
     QString toString();

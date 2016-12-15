@@ -1,7 +1,7 @@
 #include "cardview.h"
 #include "ui_cardview.h"
 
-CardView::CardView(QWidget *parent, PokemonCard* poke) :
+CardView::CardView(QWidget *parent, Card* poke) :
     QDialog(parent),
     ui(new Ui::CardView)
 {
@@ -12,6 +12,7 @@ CardView::CardView(QWidget *parent, PokemonCard* poke) :
     QString imgPath = ":/cards/Images/1.png";
     QPixmap pokePic = (imgPath);
     ui->labelCardImage->setPixmap(pokePic);
+
 
     // Display data
     AddMain("ID", poke->getID());
@@ -31,65 +32,63 @@ CardView::CardView(QWidget *parent, PokemonCard* poke) :
 
     QTreeWidgetItem *abilitiesPntr = new QTreeWidgetItem(ui->treeWidgetFull);
     abilitiesPntr->setText(0,"Abilities");
-    abilitiesPntr->setText(1,QString::number(poke->getNrOfAbilities()));
+    abilitiesPntr->setText(1,QString::number(dynamic_cast<PokemonCard*>(poke)->getNrOfAbilities()));
     ui->treeWidgetFull->addTopLevelItem(abilitiesPntr);
 
     QTreeWidgetItem *attacksPntr = new QTreeWidgetItem(ui->treeWidgetFull);
     attacksPntr->setText(0,"Attacks");
-    attacksPntr->setText(1,QString::number(poke->getNrOfAttacks()));
+    attacksPntr->setText(1,QString::number(dynamic_cast<PokemonCard*>(poke)->getNrOfAttacks()));
     ui->treeWidgetFull->addTopLevelItem(attacksPntr);
 
     QTreeWidgetItem *resistancesPntr = new QTreeWidgetItem(ui->treeWidgetFull);
     resistancesPntr->setText(0,"Resistances");
-    resistancesPntr->setText(1,QString::number(poke->getNrOfResistances()));
+    resistancesPntr->setText(1,QString::number(dynamic_cast<PokemonCard*>(poke)->getNrOfResistances()));
     ui->treeWidgetFull->addTopLevelItem(resistancesPntr);
 
     QTreeWidgetItem *typesPntr = new QTreeWidgetItem(ui->treeWidgetFull);
     typesPntr->setText(0,"Types");
-    typesPntr->setText(1,QString::number(poke->getNrOfTypes()));
+    typesPntr->setText(1,QString::number(dynamic_cast<PokemonCard*>(poke)->getNrOfTypes()));
     ui->treeWidgetFull->addTopLevelItem(typesPntr);
 
     QTreeWidgetItem *weaknessesPntr = new QTreeWidgetItem(ui->treeWidgetFull);
     weaknessesPntr->setText(0,"Weaknesses");
-    weaknessesPntr->setText(1,QString::number(poke->getNrOfWeaknesses()));
+    weaknessesPntr->setText(1,QString::number(dynamic_cast<PokemonCard*>(poke)->getNrOfWeaknesses()));
     ui->treeWidgetFull->addTopLevelItem(weaknessesPntr);
 
     // Abilities
-    for(int i = 0; i < poke->getNrOfAbilities();i++)
+    for(int i = 0; i < dynamic_cast<PokemonCard*>(poke)->getNrOfAbilities();i++)
     {
-        Ability* abilityPntr = poke->getAbility(i);
+        Ability* abilityPntr = dynamic_cast<PokemonCard*>(poke)->getAbility(i);
         AddAbility(abilitiesPntr,abilityPntr,i);
     }
 
     // Attacks
-    for(int i = 0; i < poke->getNrOfAttacks();i++)
+    for(int i = 0; i < dynamic_cast<PokemonCard*>(poke)->getNrOfAttacks();i++)
     {
-        Attack* attackPntr = poke->getAttack(i);
+        Attack* attackPntr = dynamic_cast<PokemonCard*>(poke)->getAttack(i);
         AddAttack(attacksPntr,attackPntr,i);
     }
 
     // Resistances
-    for(int i = 0; i < poke->getNrOfResistances();i++)
+    for(int i = 0; i < dynamic_cast<PokemonCard*>(poke)->getNrOfResistances();i++)
     {
-        Resistance* resistancePntr = poke->getResistance(i);
+        Resistance* resistancePntr = dynamic_cast<PokemonCard*>(poke)->getResistance(i);
         AddResistance(resistancesPntr,resistancePntr,i);
     }
 
     // Types
-    for(int i = 0; i < poke->getNrOfTypes();i++)
+    for(int i = 0; i < dynamic_cast<PokemonCard*>(poke)->getNrOfTypes();i++)
     {
-        Type* typePntr = poke->getType(i);
+        Type* typePntr = dynamic_cast<PokemonCard*>(poke)->getType(i);
         AddType(typesPntr,typePntr,i);
     }
 
     // Weaknesses
-    for(int i = 0; i < poke->getNrOfWeaknesses();i++)
+    for(int i = 0; i < dynamic_cast<PokemonCard*>(poke)->getNrOfWeaknesses();i++)
     {
-        Weakness* weaknessPntr = poke->getWeakness(i);
+        Weakness* weaknessPntr = dynamic_cast<PokemonCard*>(poke)->getWeakness(i);
         AddWeakness(weaknessesPntr,weaknessPntr,i);
     }
-
-
 }
 
 void CardView::AddRoot(QString name, QString description)
@@ -129,9 +128,8 @@ void CardView::AddUser(QString name, QString description)
 void CardView::AddAbility(QTreeWidgetItem *parent, Ability* abilityPntr, int i)
 {
     QTreeWidgetItem *itm = new QTreeWidgetItem();
-    QString title = "Ability " + QString::number(i+1);
-    itm->setText(0,title);
-    itm->setText(1," ");
+    itm->setText(0, "Ability");
+    itm->setText(1, QString::number(i+1));
     parent->addChild(itm);
     AddChild(itm, "Name", abilityPntr->getAbilityName());
     AddChild(itm, "Type", abilityPntr->getAbilityType());
@@ -141,9 +139,8 @@ void CardView::AddAbility(QTreeWidgetItem *parent, Ability* abilityPntr, int i)
 void CardView::AddAttack(QTreeWidgetItem *parent, Attack* attackPntr, int i)
 {
     QTreeWidgetItem *itm = new QTreeWidgetItem();
-    QString title = "Attack " + QString::number(i+1);
-    itm->setText(0,title);
-    itm->setText(1," ");
+    itm->setText(0, "Attack");
+    itm->setText(1, QString::number(i+1));
     parent->addChild(itm);
     AddChild(itm, "Name", attackPntr->getAttackName());
     AddChild(itm, "Damage", attackPntr->getAttackDamage());
@@ -155,9 +152,8 @@ void CardView::AddAttack(QTreeWidgetItem *parent, Attack* attackPntr, int i)
 void CardView::AddResistance(QTreeWidgetItem *parent, Resistance* resistancePntr, int i)
 {
     QTreeWidgetItem *itm = new QTreeWidgetItem();
-    QString title = "Resistance " + QString::number(i+1);
-    itm->setText(0,title);
-    itm->setText(1," ");
+    itm->setText(0,"Resistance");
+    itm->setText(1, QString::number(i+1));
     parent->addChild(itm);
     AddChild(itm, "Type", resistancePntr->getResistanceType());
     AddChild(itm, "Value", resistancePntr->getResistanceValue());
@@ -166,9 +162,8 @@ void CardView::AddResistance(QTreeWidgetItem *parent, Resistance* resistancePntr
 void CardView::AddType(QTreeWidgetItem *parent, Type* typePntr, int i)
 {
     QTreeWidgetItem *itm = new QTreeWidgetItem();
-    QString title = "Type " + QString::number(i+1);
-    itm->setText(0,title);
-    itm->setText(1," ");
+    itm->setText(0,"Type");
+    itm->setText(1, QString::number(i+1));
     parent->addChild(itm);
     AddChild(itm, "Name", typePntr->getTypeName());
 }
@@ -176,9 +171,8 @@ void CardView::AddType(QTreeWidgetItem *parent, Type* typePntr, int i)
 void CardView::AddWeakness(QTreeWidgetItem *parent, Weakness* weaknessPntr, int i)
 {
     QTreeWidgetItem *itm = new QTreeWidgetItem();
-    QString title = "Weakness " + QString::number(i+1);
-    itm->setText(0,title);
-    itm->setText(1," ");
+    itm->setText(0,"Weakness");
+    itm->setText(1, QString::number(i+1));
     parent->addChild(itm);
     AddChild(itm, "Type", weaknessPntr->getWeaknessType());
     AddChild(itm, "Value", weaknessPntr->getWeaknessValue());

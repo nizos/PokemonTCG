@@ -40,26 +40,27 @@ PokemonCard::PokemonCard(int hp, int nrOfAbilities,int nrOfRetreatCosts, int nrO
     // Abilities
     this->nrOfAbilities = nrOfAbilities;
     this->abilities = new Ability*[nrOfAbilities];
-
-    // Retreat costs
-    this->nrOfRetreatCosts = nrOfRetreatCosts;
-    this->retreatCosts = new Type*[nrOfRetreatCosts];
+    abilities[0] = new Ability();
 
     // Types
     this->nrOfTypes = nrOfTypes;
     this->types = new Type*[nrOfTypes];
+    types[0] = new Type();
 
     // Attacks
     this->nrOfAttacks = nrOfAttacks;
     this->attacks = new Attack*[nrOfAttacks];
+    attacks[0] = new Attack();
 
     // Weaknesses
     this->nrOfWeaknesses = nrOfWeaknesses;
     this->weaknesses = new Weakness*[nrOfWeaknesses];
+    weaknesses[0] = new Weakness();
 
     // Resistances
     this->nrOfResistances = nrOfResistances;
     this->resistances = new Resistance*[nrOfResistances];
+    resistances[0] = new Resistance();
 }
 
 
@@ -169,34 +170,82 @@ Resistance* PokemonCard::getResistance(int pos)
 
 
 // Add
-void PokemonCard::addRetreatCost()
+void PokemonCard::addRetreatCost(QString retreatTypeName)
 {
-
+    Type** tempRetreatCosts = new Type*[nrOfRetreatCosts+1];
+    for (int i = 0; i < nrOfRetreatCosts; i++)
+    {
+        Type* retrPntr = new Type(retreatCosts[i]->getTypeName());
+        tempRetreatCosts[i] = retrPntr;
+    }
+    retreatCosts = tempRetreatCosts;
+    retreatCosts[nrOfRetreatCosts] = new Type(retreatTypeName);
+    nrOfRetreatCosts++;
 }
 
-void PokemonCard::addAbility()
+void PokemonCard::addAbility(QString abilityName, QString abilityText, QString abilityType)
 {
-
+    Ability** tempAbilities = new Ability*[nrOfAbilities+1];
+    for (int i = 0; i < nrOfAbilities; i++)
+    {
+        Ability* abltyPntr = new Ability(abilities[i]->getAbilityName(),abilities[i]->getAbilityText(),abilities[i]->getAbilityType());
+        tempAbilities[i] = abltyPntr;
+    }
+    abilities = tempAbilities;
+    abilities[nrOfAbilities] = new Ability(abilityName,abilityText,abilityType);
+    nrOfAbilities++;
 }
 
-void PokemonCard::addType()
+void PokemonCard::addType(QString typeName)
 {
-
+    Type** tempTypes = new Type*[nrOfTypes+1];
+    for (int i = 0; i < nrOfTypes; i++)
+    {
+        Type* typePntr = new Type(types[i]->getTypeName());
+        tempTypes[i] = typePntr;
+    }
+    types = tempTypes;
+    types[nrOfTypes] = new Type(typeName);
+    nrOfTypes++;
 }
 
-void PokemonCard::addAttack()
+void PokemonCard::addAttack(QString attackCost, QString attackName, QString attackText, QString attackDamage, QString attackConvertedEnergyCost)
 {
-
+    Attack** tempAttacks = new Attack*[nrOfAttacks+1];
+    for (int i = 0; i < nrOfAttacks; i++)
+    {
+        Attack* attkPntr = new Attack(attacks[i]->getAttackCost(),attacks[i]->getAttackName(),attacks[i]->getAttackText(), attacks[i]->getAttackDamage(), attacks[i]->getAttackConvertedEnergyCost());
+        tempAttacks[i] = attkPntr;
+    }
+    attacks = tempAttacks;
+    attacks[nrOfAttacks] = new Attack(attackCost,attackName,attackText,attackDamage,attackConvertedEnergyCost);
+    nrOfAttacks++;
 }
 
-void PokemonCard::addWeakness()
+void PokemonCard::addWeakness(QString weaknessType, QString weaknessValue)
 {
-
+    Weakness** tempWeaknesses = new Weakness*[nrOfWeaknesses+1];
+    for (int i = 0; i < nrOfWeaknesses; i++)
+    {
+        Weakness* wknsPntr = new Weakness(weaknesses[i]->getWeaknessType(),weaknesses[i]->getWeaknessValue());
+        tempWeaknesses[i] = wknsPntr;
+    }
+    weaknesses = tempWeaknesses;
+    weaknesses[nrOfWeaknesses] = new Weakness(weaknessType,weaknessValue);
+    nrOfWeaknesses++;
 }
 
-void PokemonCard::addResistance()
+void PokemonCard::addResistance(QString resistanceType, QString resistanceValue)
 {
-
+    Resistance** tempResistances = new Resistance*[nrOfResistances+1];
+    for (int i = 0; i < nrOfResistances; i++)
+    {
+        Resistance* rstsPntr = new Resistance(resistances[i]->getResistanceType(),resistances[i]->getResistanceValue());
+        tempResistances[i] = rstsPntr;
+    }
+    resistances = tempResistances;
+    resistances[nrOfResistances] = new Resistance(resistanceType,resistanceValue);
+    nrOfResistances++;
 }
 
 

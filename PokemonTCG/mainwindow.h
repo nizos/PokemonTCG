@@ -4,8 +4,10 @@
 #include <QMainWindow>
 #include <QPixmap>
 #include <QFile>
+#include <QDebug>
 #include "cardview.h"
 #include "pokemoncard.h"
+#include "album.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,7 +28,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     CardView *cv;
-    PokemonCard* poke;
+    Card *poke;
+    Album *pokeAlbum;
 
 };
 

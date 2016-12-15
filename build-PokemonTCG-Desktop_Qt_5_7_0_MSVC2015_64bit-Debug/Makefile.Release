@@ -318,7 +318,105 @@ release\qrc_localfiles.cpp: ..\PokemonTCG\Resources\localfiles.qrc \
 		..\PokemonTCG\Resources\Images\55.png \
 		..\PokemonTCG\Resources\Images\17.png \
 		..\PokemonTCG\Resources\Images\61.png \
-		..\PokemonTCG\Resources\Images\23.png
+		..\PokemonTCG\Resources\Images\23.png \
+		..\PokemonTCG\Resources\JSON\xy7-39.json \
+		..\PokemonTCG\Resources\JSON\xy7-9.json \
+		..\PokemonTCG\Resources\JSON\xy7-78.json \
+		..\PokemonTCG\Resources\JSON\xy7-40.json \
+		..\PokemonTCG\Resources\JSON\xy7-32.json \
+		..\PokemonTCG\Resources\JSON\xy7-2.json \
+		..\PokemonTCG\Resources\JSON\xy7-71.json \
+		..\PokemonTCG\Resources\JSON\xy7-24.json \
+		..\PokemonTCG\Resources\JSON\xy7-64.json \
+		..\PokemonTCG\Resources\JSON\xy7-17.json \
+		..\PokemonTCG\Resources\JSON\xy7-56.json \
+		..\PokemonTCG\Resources\JSON\xy7-95.json \
+		..\PokemonTCG\Resources\JSON\xy7-48.json \
+		..\PokemonTCG\Resources\JSON\xy7-87.json \
+		..\PokemonTCG\Resources\JSON\xy7-10.json \
+		..\PokemonTCG\Resources\JSON\xy7-79.json \
+		..\PokemonTCG\Resources\JSON\xy7-41.json \
+		..\PokemonTCG\Resources\JSON\xy7-80.json \
+		..\PokemonTCG\Resources\JSON\xy7-33.json \
+		..\PokemonTCG\Resources\JSON\xy7-3.json \
+		..\PokemonTCG\Resources\JSON\xy7-72.json \
+		..\PokemonTCG\Resources\JSON\xy7-25.json \
+		..\PokemonTCG\Resources\JSON\xy7-65.json \
+		..\PokemonTCG\Resources\JSON\xy7-18.json \
+		..\PokemonTCG\Resources\JSON\xy7-57.json \
+		..\PokemonTCG\Resources\JSON\xy7-96.json \
+		..\PokemonTCG\Resources\JSON\xy7-49.json \
+		..\PokemonTCG\Resources\JSON\xy7-88.json \
+		..\PokemonTCG\Resources\JSON\xy7-11.json \
+		..\PokemonTCG\Resources\JSON\xy7-50.json \
+		..\PokemonTCG\Resources\JSON\xy7-42.json \
+		..\PokemonTCG\Resources\JSON\xy7-81.json \
+		..\PokemonTCG\Resources\JSON\xy7-34.json \
+		..\PokemonTCG\Resources\JSON\xy7-4.json \
+		..\PokemonTCG\Resources\JSON\xy7-73.json \
+		..\PokemonTCG\Resources\JSON\xy7-26.json \
+		..\PokemonTCG\Resources\JSON\xy7-66.json \
+		..\PokemonTCG\Resources\JSON\xy7-19.json \
+		..\PokemonTCG\Resources\JSON\xy7-58.json \
+		..\PokemonTCG\Resources\JSON\xy7-97.json \
+		..\PokemonTCG\Resources\JSON\xy7-89.json \
+		..\PokemonTCG\Resources\JSON\xy7-12.json \
+		..\PokemonTCG\Resources\JSON\xy7-51.json \
+		..\PokemonTCG\Resources\JSON\xy7-90.json \
+		..\PokemonTCG\Resources\JSON\xy7-43.json \
+		..\PokemonTCG\Resources\JSON\xy7-82.json \
+		..\PokemonTCG\Resources\JSON\xy7-35.json \
+		..\PokemonTCG\Resources\JSON\xy7-5.json \
+		..\PokemonTCG\Resources\JSON\xy7-74.json \
+		..\PokemonTCG\Resources\JSON\xy7-27.json \
+		..\PokemonTCG\Resources\JSON\xy7-67.json \
+		..\PokemonTCG\Resources\JSON\xy7-20.json \
+		..\PokemonTCG\Resources\JSON\xy7-59.json \
+		..\PokemonTCG\Resources\JSON\xy7-98.json \
+		..\PokemonTCG\Resources\JSON\xy7-60.json \
+		..\PokemonTCG\Resources\JSON\xy7-13.json \
+		..\PokemonTCG\Resources\JSON\xy7-52.json \
+		..\PokemonTCG\Resources\JSON\xy7-91.json \
+		..\PokemonTCG\Resources\JSON\xy7-44.json \
+		..\PokemonTCG\Resources\JSON\xy7-83.json \
+		..\PokemonTCG\Resources\JSON\xy7-36.json \
+		..\PokemonTCG\Resources\JSON\xy7-6.json \
+		..\PokemonTCG\Resources\JSON\xy7-75.json \
+		..\PokemonTCG\Resources\JSON\xy7-28.json \
+		..\PokemonTCG\Resources\JSON\xy7-21.json \
+		..\PokemonTCG\Resources\JSON\xy7-68.json \
+		..\PokemonTCG\Resources\JSON\xy7-61.json \
+		..\PokemonTCG\Resources\JSON\xy7-14.json \
+		..\PokemonTCG\Resources\JSON\xy7-53.json \
+		..\PokemonTCG\Resources\JSON\xy7-92.json \
+		..\PokemonTCG\Resources\JSON\xy7-45.json \
+		..\PokemonTCG\Resources\JSON\xy7-84.json \
+		..\PokemonTCG\Resources\JSON\xy7-37.json \
+		..\PokemonTCG\Resources\JSON\xy7-7.json \
+		..\PokemonTCG\Resources\JSON\xy7-76.json \
+		..\PokemonTCG\Resources\JSON\xy7-29.json \
+		..\PokemonTCG\Resources\JSON\xy7-30.json \
+		..\PokemonTCG\Resources\JSON\xy7-22.json \
+		..\PokemonTCG\Resources\JSON\xy7-69.json \
+		..\PokemonTCG\Resources\JSON\xy7-62.json \
+		..\PokemonTCG\Resources\JSON\xy7-15.json \
+		..\PokemonTCG\Resources\JSON\xy7-54.json \
+		..\PokemonTCG\Resources\JSON\xy7-93.json \
+		..\PokemonTCG\Resources\JSON\xy7-46.json \
+		..\PokemonTCG\Resources\JSON\xy7-85.json \
+		..\PokemonTCG\Resources\JSON\xy7-38.json \
+		..\PokemonTCG\Resources\JSON\xy7-8.json \
+		..\PokemonTCG\Resources\JSON\xy7-77.json \
+		..\PokemonTCG\Resources\JSON\xy7-31.json \
+		..\PokemonTCG\Resources\JSON\xy7-1.json \
+		..\PokemonTCG\Resources\JSON\xy7-70.json \
+		..\PokemonTCG\Resources\JSON\xy7-23.json \
+		..\PokemonTCG\Resources\JSON\xy7-63.json \
+		..\PokemonTCG\Resources\JSON\xy7-16.json \
+		..\PokemonTCG\Resources\JSON\xy7-55.json \
+		..\PokemonTCG\Resources\JSON\xy7-94.json \
+		..\PokemonTCG\Resources\JSON\xy7-47.json \
+		..\PokemonTCG\Resources\JSON\xy7-86.json
 	C:\Qt\5.7\msvc2015_64\bin\rcc.exe -name localfiles ..\PokemonTCG\Resources\localfiles.qrc -o release\qrc_localfiles.cpp
 
 compiler_moc_header_make_all: release\moc_mainwindow.cpp release\moc_cardview.cpp
@@ -426,6 +524,7 @@ release\moc_mainwindow.cpp: C:\Qt\5.7\msvc2015_64\include\QtWidgets\QMainWindow 
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qicon.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\QPixmap \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
 		..\PokemonTCG\cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -663,6 +762,12 @@ release\moc_mainwindow.cpp: C:\Qt\5.7\msvc2015_64\include\QtWidgets\QMainWindow 
 		..\PokemonTCG\attack.h \
 		..\PokemonTCG\weakness.h \
 		..\PokemonTCG\resistance.h \
+		..\PokemonTCG\album.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
 		..\PokemonTCG\mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\bin\moc.exe
 	C:\Qt\5.7\msvc2015_64\bin\moc.exe $(DEFINES) -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -IC:/Qt/5.7/msvc2015_64/mkspecs/win32-msvc2015 -I"C:/Users/nizar/Dropbox/Dev/GitHub Repo/PokemonTCG/PokemonTCG" -IC:/Qt/5.7/msvc2015_64/include -IC:/Qt/5.7/msvc2015_64/include/QtWidgets -IC:/Qt/5.7/msvc2015_64/include/QtGui -IC:/Qt/5.7/msvc2015_64/include/QtANGLE -IC:/Qt/5.7/msvc2015_64/include/QtCore -I. ..\PokemonTCG\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1133,6 +1238,7 @@ release\main.obj: ..\PokemonTCG\main.cpp ../PokemonTCG/mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qicon.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\QPixmap \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
 		../PokemonTCG/cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -1370,6 +1476,12 @@ release\main.obj: ..\PokemonTCG\main.cpp ../PokemonTCG/mainwindow.h \
 		../PokemonTCG/attack.h \
 		../PokemonTCG/weakness.h \
 		../PokemonTCG/resistance.h \
+		../PokemonTCG/album.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QApplication \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdesktopwidget.h
@@ -1477,6 +1589,7 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		C:\Qt\5.7\msvc2015_64\include\QtGui\qicon.h \
 		C:\Qt\5.7\msvc2015_64\include\QtGui\QPixmap \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
 		../PokemonTCG/cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QDialog \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qdialog.h \
@@ -1714,6 +1827,12 @@ release\mainwindow.obj: ..\PokemonTCG\mainwindow.cpp ../PokemonTCG/mainwindow.h 
 		../PokemonTCG/attack.h \
 		../PokemonTCG/weakness.h \
 		../PokemonTCG/resistance.h \
+		../PokemonTCG/album.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
 		ui_mainwindow.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QVariant \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QAction \
@@ -1813,7 +1932,58 @@ release\album.obj: ..\PokemonTCG\album.cpp ../PokemonTCG/album.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qnamespace.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringbuilder.h \
-		../PokemonTCG/card.h
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h
 
 release\attack.obj: ..\PokemonTCG\attack.cpp ../PokemonTCG/attack.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
@@ -1943,7 +2113,58 @@ release\library.obj: ..\PokemonTCG\library.cpp ../PokemonTCG/library.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qarraydata.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringbuilder.h \
 		../PokemonTCG/album.h \
-		../PokemonTCG/card.h
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h
 
 release\pokemoncard.obj: ..\PokemonTCG\pokemoncard.cpp ..\PokemonTCG\pokemonCard.h \
 		../PokemonTCG/card.h \
@@ -2016,7 +2237,58 @@ release\programmanager.obj: ..\PokemonTCG\programmanager.cpp ../PokemonTCG/progr
 		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringbuilder.h \
 		../PokemonTCG/library.h \
 		../PokemonTCG/album.h \
-		../PokemonTCG/card.h
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QFile \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfile.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qfiledevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiodevice.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobjectdefs_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qalgorithms.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qiterator.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhashfunctions.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpair.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qbytearraylist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringlist.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qregexp.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qstringmatcher.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcoreevent.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qscopedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmetatype.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvarlengtharray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontainerfwd.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qobject_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QDebug \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qdebug.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qhash.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qmap.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qtextstream.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qlocale.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvariant.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qshareddata.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qvector.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qpoint.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qset.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qcontiguouscache.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qsharedpointer_impl.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QTextStream \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonArray \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonarray.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonObject \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.7\msvc2015_64\include\QtCore\QJsonValue \
+		../PokemonTCG/pokemoncard.h \
+		../PokemonTCG/card.h \
+		../PokemonTCG/type.h \
+		../PokemonTCG/ability.h \
+		../PokemonTCG/attack.h \
+		../PokemonTCG/weakness.h \
+		../PokemonTCG/resistance.h
 
 release\resistance.obj: ..\PokemonTCG\resistance.cpp ../PokemonTCG/resistance.h \
 		C:\Qt\5.7\msvc2015_64\include\QtCore\QString \
@@ -2500,6 +2772,8 @@ release\cardview.obj: ..\PokemonTCG\cardview.cpp ../PokemonTCG/cardview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qheaderview.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLabel \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QLineEdit \
+		C:\Qt\5.7\msvc2015_64\include\QtWidgets\qlineedit.h \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QTreeWidget \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QVBoxLayout \
 		C:\Qt\5.7\msvc2015_64\include\QtWidgets\QWidget
